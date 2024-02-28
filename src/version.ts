@@ -20,7 +20,7 @@ export type VersionType = semver.ReleaseType | 'beta' | 'rc' | 'alpha' | string;
  * // 1.0.0 => 1.0.1-beta.0
  */
 export async function updateVersion(
-  type: VersionType,
+  type: VersionType = 'patch',
   preId?: string,
 ): Promise<string> {
   const pkgPath = path.resolve(process.cwd(), 'package.json');
