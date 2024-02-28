@@ -6,7 +6,26 @@ Project release operators.
 
 ```shell
 npm i -D release-ops
+```
 
+register scripts in package.json:
+
+```json
+{
+  "scripts": {
+    "publish:beta": "release-ops beta",
+    "publish:patch": "release-ops"
+  }
+}
+```
+
+### Release
+
+Release next version.
+
+> WorkFlow: update version => build => generate changelog => generate tag => publish npm => push git
+
+```shell
 # beta
 release-ops beta
 # 1.0.0 => 1.0.1-beta.0
@@ -24,13 +43,43 @@ release-ops prerelease -p custom
 # 1.0.0 => 1.0.1-custom.0
 ```
 
-register scripts in package.json:
+### Tag
 
-```json
-{
-  "scripts": {
-    "publish:beta": "release-ops beta",
-    "publish:patch": "release-ops"
-  }
-}
+Make tag.
+
+> WorkFlow: update version => build => generate changelog => generate tag
+
+```shell
+# beta
+release-ops tag beta
+
+# patch
+release-ops tag patch
 ```
+
+### Version
+
+Update version.
+
+```shell
+# beta
+release-ops version beta
+
+# patch
+release-ops version patch
+```
+
+### Changelog
+
+Update changelog.
+
+```shell
+release-ops changelog
+```
+
+## API
+
+- release
+- makeTag
+- updateVersion
+- updateChangelog
