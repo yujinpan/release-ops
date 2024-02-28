@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as l,V as e}from"./chunks/framework.5dcc3a2b.js";const g=JSON.parse('{"title":"Release operators","description":"","frontmatter":{},"headers":[],"relativePath":"README.md"}'),n={name:"README.md"},p=e("",22),o=[p];function t(c,r,i,y,C,h){return l(),a("div",null,o)}const d=s(n,[["render",t]]);export{g as __pageData,d as default};
