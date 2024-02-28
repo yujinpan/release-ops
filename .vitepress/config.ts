@@ -4,7 +4,7 @@ export default defineConfig({
   appearance: true,
   base: '/release-ops/',
   title: 'release-ops',
-  description: 'Project release operations.',
+  description: 'Project release operators.',
 
   themeConfig: {
     logo: '/logo.svg',

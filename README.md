@@ -1,6 +1,6 @@
-# Release Operations
+# Release operators
 
-Project release operations.
+Project release operators.
 
 ## Usage
 
