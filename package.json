@@ -20,10 +20,8 @@
     "release-ops": "bin/release-ops.js"
   },
   "scripts": {
-    "publish:beta": "npm version prerelease --preid=beta && npm publish",
-    "publish:patch": "npm version patch && npm publish",
-    "version": "npm run build",
-    "postversion": "git push --all && git push --tags",
+    "publish:beta": "npm run build && node bin/release-ops.js beta",
+    "publish:patch": "npm run build && node bin/release-ops.js patch",
     "build": "rollupx",
     "test": "jest",
     "docs:dev": "vitepress dev .",
