@@ -1,3 +1,9 @@
+## [1.0.1-beta.2](https://github.com/yujinpan/release-ops/compare/v1.0.1-beta.1...v1.0.1-beta.2) (2024-02-28)
+
+### Bug Fixes
+
+- use `stdio: inherit` run child process ([3e216d6](https://github.com/yujinpan/release-ops/commit/3e216d633feef1dac8354b2ba098065e7082b70c))
+
 ## [1.0.1-beta.1](https://github.com/yujinpan/release-ops/compare/v1.0.1-beta.0...v1.0.1-beta.1) (2024-02-28)
 
 ### Features
