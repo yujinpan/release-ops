@@ -1,0 +1,22 @@
+import{_ as s,c as a,o as n,V as l}from"./chunks/framework.5dcc3a2b.js";const A=JSON.parse('{"title":"Release operators","description":"","frontmatter":{},"headers":[],"relativePath":"index.md"}'),e={name:"index.md"},p=l(`<h1 id="release-operators" tabindex="-1">Release operators <a class="header-anchor" href="#release-operators" aria-label="Permalink to &quot;Release operators&quot;">​</a></h1><p>Project release operators.</p><h2 id="usage" tabindex="-1">Usage <a class="header-anchor" href="#usage" aria-label="Permalink to &quot;Usage&quot;">​</a></h2><div class="language-shell"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#FFCB6B;">npm</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">i</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">-D</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">release-ops</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"># beta</span></span>
+<span class="line"><span style="color:#FFCB6B;">release-ops</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">beta</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"># 1.0.0 =&gt; 1.0.1-beta.0</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"># patch</span></span>
+<span class="line"><span style="color:#FFCB6B;">release-ops</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">patch</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"># 1.0.0 =&gt; 1.0.1</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"># custom</span></span>
+<span class="line"><span style="color:#FFCB6B;">release-ops</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">1.0.1-beta.</span><span style="color:#F78C6C;">0</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"># 1.0.0 =&gt; 1.0.1-beta.0</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"># custom prerelease-id</span></span>
+<span class="line"><span style="color:#FFCB6B;">release-ops</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">prerelease</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">-p</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">custom</span></span>
+<span class="line"><span style="color:#676E95;font-style:italic;"># 1.0.0 =&gt; 1.0.1-custom.0</span></span></code></pre></div><p>register scripts in package.json:</p><div class="language-json"><button title="Copy Code" class="copy"></button><span class="lang">json</span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">&quot;</span><span style="color:#C792EA;">scripts</span><span style="color:#89DDFF;">&quot;</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#89DDFF;">&quot;</span><span style="color:#FFCB6B;">publish:beta</span><span style="color:#89DDFF;">&quot;</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&quot;</span><span style="color:#C3E88D;">release-ops beta</span><span style="color:#89DDFF;">&quot;</span><span style="color:#89DDFF;">,</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#89DDFF;">&quot;</span><span style="color:#FFCB6B;">publish:patch</span><span style="color:#89DDFF;">&quot;</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&quot;</span><span style="color:#C3E88D;">release-ops</span><span style="color:#89DDFF;">&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">}</span></span>
+<span class="line"><span style="color:#89DDFF;">}</span></span></code></pre></div>`,6),o=[p];function t(c,r,i,y,D,C){return n(),a("div",null,o)}const u=s(e,[["render",t]]);export{A as __pageData,u as default};
