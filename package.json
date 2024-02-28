@@ -61,5 +61,8 @@
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/yujinpan/release-ops.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }
