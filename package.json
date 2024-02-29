@@ -1,6 +1,6 @@
 {
   "name": "release-ops",
-  "version": "1.0.1-beta.2",
+  "version": "1.0.1-beta.3",
   "description": "Release operators.",
   "type": "module",
   "main": "lib/index.js",
