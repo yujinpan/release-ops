@@ -1,11 +1,7 @@
-import { $ } from 'execa';
-
 import type { VersionType } from './version';
 
 import { makeTag } from './tag';
-import { printGreen } from './utils';
-
-const $$ = $({ stdio: 'inherit' });
+import { printGreen, $$ } from './utils';
 
 export async function release(type?: VersionType, preId?: string) {
   const version = await makeTag(type, preId);

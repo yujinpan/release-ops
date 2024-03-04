@@ -1,3 +1,4 @@
+import { $ } from 'execa';
 import picocolors from 'picocolors';
 import prompts from 'prompts';
 
@@ -18,3 +19,5 @@ export function promptsConfirm(message: string) {
     message,
   }).then((res) => (res.yes ? Promise.resolve() : Promise.reject()));
 }
+
+export const $$ = $({ stdio: 'inherit' });
