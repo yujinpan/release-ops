@@ -7,10 +7,16 @@ import { updateVersion } from './version';
 export async function makeTag(type?: VersionType, preId?: string) {
   const version = await updateVersion(type, preId);
 
-  printGreen('Run building...');
-  await $$`npm run build`;
+  await updateChangeLog().catch(async (e) => {
+    await $$`git checkout package.json CHANGELOG.md`;
+    return Promise.reject(e);
+  });
 
-  await updateChangeLog();
+  printGreen('Run building...');
+  await $$`npm run build`.catch(async (e) => {
+    await $$`git checkout package.json CHANGELOG.md`;
+    return Promise.reject(e);
+  });
 
   printGreen('Committing changes...');
   await $$`git add CHANGELOG.md package.json`;
