@@ -12,7 +12,7 @@ export async function makeTag(type?: VersionType, preId?: string) {
     return Promise.reject(e);
   });
 
-  printInfo('\nRun building...\n', 'cyan');
+  printInfo('\nRun building...\n\n', 'cyan');
   await $$`npm run build`.catch(async (e) => {
     await $$`git checkout package.json CHANGELOG.md`;
     return Promise.reject(e);
