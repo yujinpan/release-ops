@@ -12,15 +12,15 @@ export async function release(
   const version = await makeTag(type, preId);
 
   if (push) {
-    printInfo('\nPushing...\n', 'cyan');
+    printInfo('\nPushing...\n\n', 'cyan');
     await $$`git push origin refs/tags/v${version}`;
     await $$`git push`;
   }
 
   if (publish) {
-    printInfo('\nPublishing the package...\n', 'cyan');
+    printInfo('\nPublishing the package...\n\n', 'cyan');
     await $$`npm publish`;
   }
 
-  printInfo(`\nReleased v${version}!`, 'green');
+  printInfo(`\nReleased v${version}!\n`, 'green');
 }

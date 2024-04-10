@@ -18,7 +18,7 @@ export async function makeTag(type?: VersionType, preId?: string) {
     return Promise.reject(e);
   });
 
-  printInfo('\nCommitting changes...\n', 'cyan');
+  printInfo('\nCommitting changes...\n\n', 'cyan');
   await $$`git add CHANGELOG.md package.json`;
   await $$`git commit -m ${version}`;
   await $$`git tag v${version}`;
