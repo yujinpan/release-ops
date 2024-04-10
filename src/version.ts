@@ -4,7 +4,7 @@ import picocolors from 'picocolors';
 import * as process from 'process';
 import semver from 'semver';
 
-import { printGreen, promptsConfirm } from './utils';
+import { promptsConfirm } from './utils';
 
 export type VersionType = semver.ReleaseType | 'beta' | 'rc' | 'alpha' | string;
 
@@ -49,7 +49,6 @@ export async function updateVersion(
     )} to ${picocolors.green(nextVersion)} ?`,
   );
 
-  printGreen('Writing the package version...');
   fs.writeFileSync(
     pkgPath,
     JSON.stringify({ ...pkg, version: nextVersion }, null, 2) + '\n',
