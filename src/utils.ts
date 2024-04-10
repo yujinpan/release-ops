@@ -1,15 +1,15 @@
 import { $ } from 'execa';
+import * as process from 'node:process';
 import picocolors from 'picocolors';
 import prompts from 'prompts';
 
-export function printGreen(info: string) {
-  // eslint-disable-next-line no-console
-  printInfo(picocolors.green(`\n${info}`));
-}
+import type { Colors } from 'picocolors/types';
 
-function printInfo(info: string) {
-  // eslint-disable-next-line no-console
-  console.log(info);
+export function printInfo(
+  info: string,
+  color: keyof Omit<Colors, 'isColorSupported'> = 'white',
+) {
+  process.stdout.write(picocolors[color](info));
 }
 
 export function promptsConfirm(message: string) {

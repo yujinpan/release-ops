@@ -1,7 +1,7 @@
 import type { VersionType } from './version';
 
 import { updateChangeLog } from './changelog';
-import { $$, printGreen } from './utils';
+import { $$, printInfo } from './utils';
 import { updateVersion } from './version';
 
 export async function makeTag(type?: VersionType, preId?: string) {
@@ -12,13 +12,13 @@ export async function makeTag(type?: VersionType, preId?: string) {
     return Promise.reject(e);
   });
 
-  printGreen('Run building...');
+  printInfo('\nRun building...\n', 'cyan');
   await $$`npm run build`.catch(async (e) => {
     await $$`git checkout package.json CHANGELOG.md`;
     return Promise.reject(e);
   });
 
-  printGreen('Committing changes...');
+  printInfo('\nCommitting changes...\n', 'cyan');
   await $$`git add CHANGELOG.md package.json`;
   await $$`git commit -m ${version}`;
   await $$`git tag v${version}`;

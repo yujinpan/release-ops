@@ -17,9 +17,13 @@ yargs(process.argv.slice(2))
   .command(
     '$0',
     `release ${types}`,
-    { p: { alias: 'preid', string: true } },
+    {
+      p: { alias: 'preid', string: true },
+      push: { boolean: true, default: true },
+      publish: { boolean: true, default: true },
+    },
     (args) => {
-      release(args._[0], args.p);
+      release(args._[0], args);
     },
   )
   .command('tag', `make tag with type: ${types}`, (args) =>
