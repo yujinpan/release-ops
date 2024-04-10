@@ -23,7 +23,7 @@ yargs(process.argv.slice(2))
       publish: { boolean: true, default: true },
     },
     (args) => {
-      release(args._[0], args);
+      release(args._[0], { ...args, preId: args.p });
     },
   )
   .command('tag', `make tag with type: ${types}`, (args) =>
