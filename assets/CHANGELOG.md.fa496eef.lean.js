@@ -1,1 +1,0 @@
-import{_ as e,c as a,o as t,V as r}from"./chunks/framework.6490956a.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"CHANGELOG.md"}'),o={name:"CHANGELOG.md"},i=r("",17),s=[i];function l(n,b,h,c,u,d){return t(),a("div",null,s)}const m=e(o,[["render",l]]);export{f as __pageData,m as default};
