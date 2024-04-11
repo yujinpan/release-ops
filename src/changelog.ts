@@ -20,7 +20,7 @@ export async function updateChangeLog() {
 
   fs.writeFileSync(
     changelogFilePath,
-    format(changelog + '\n' + existChangelog, {
+    await format(changelog + '\n' + existChangelog, {
       filepath: changelogFilePath,
     }),
   );
