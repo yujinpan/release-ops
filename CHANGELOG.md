@@ -1,3 +1,5 @@
+## [1.0.1](https://github.com/yujinpan/release-ops/compare/v1.0.1-beta.7...v1.0.1) (2024-04-15)
+
 ## [1.0.1-beta.7](https://github.com/yujinpan/release-ops/compare/v1.0.1-beta.6...v1.0.1-beta.7) (2024-04-11)
 
 ## [1.0.1-beta.6](https://github.com/yujinpan/release-ops/compare/v1.0.1-beta.5...v1.0.1-beta.6) (2024-04-11)
